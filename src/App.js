@@ -35,7 +35,7 @@ function App() {
 		resolver: yupResolver(schema),
 	});
 
-	const onSubmit = (data) => {
+	const onSubmit = () => {
 		// Prevent Default Behaviour
 		if (queryType !== "" && consent) {
 			setSuccess(true);

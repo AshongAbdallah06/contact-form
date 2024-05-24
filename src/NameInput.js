@@ -14,6 +14,7 @@ const NameInput = ({ register, errors }) => {
 						{...register("firstName")}
 						className={errors.firstName?.message && "error-input"}
 					/>
+					<p className="errors">{errors.firstName?.message}</p>
 				</div>
 				<div className="inputs">
 					<label htmlFor="lname">
@@ -25,12 +26,8 @@ const NameInput = ({ register, errors }) => {
 						{...register("lastName")}
 						className={errors.lastName?.message && "error-input"}
 					/>
+					<p className="errors lname">{errors.lastName?.message}</p>
 				</div>
-			</div>
-
-			<div className="errors-container">
-				<p className="errors">{errors.firstName?.message}</p>
-				<p className="errors lname">{errors.lastName?.message}</p>
 			</div>
 		</>
 	);

@@ -9,7 +9,7 @@
 
 .App {
 	display: flex;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -214,4 +214,40 @@ textarea.error-input {
 
 .show {
 	opacity: 1;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+	.App {
+		padding: 2rem;
+	}
+	.container,
+	.query-type .inputs-container {
+		flex-direction: column;
+	}
+
+	.name .inputs:first-child {
+		margin-right: 0;
+	}
+
+	.name,
+	.name .inputs:last-child,
+	.container,
+	.query-type,
+	.query-type .inputs:last-child {
+		margin-top: 1rem;
+	}
+
+	.query-type .inputs span {
+		font-size: 0.8rem;
+		margin-left: 0.5rem;
+	}
+
+	.consent .text {
+		font-size: 0.8rem;
+	}
+
+	.errors.lname {
+		margin-left: 0;
+	}
 }
